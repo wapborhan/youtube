@@ -32,6 +32,11 @@
             z-index: 1000;
         }
 
+        header.sticky {
+            background: #000000b3;
+            padding: 5px 100px;
+        }
+
         header .logo {
             font-family: 'Poppins', sans-serif;
             color: #ff0000;
@@ -64,15 +69,39 @@
         .banner {
             position: relative;
             width: 100%;
-            height: 200vh;
-            background: url(assets/img/banner.jpeg)
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80') center center no-repeat;
+            background-size: cover;
         }
 
-        header.sticky {
-            background: #000000b3;
-            padding: 5px 100px;
+        section.about {
+            padding: 100px 0px;
         }
 
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        section.about .tittle {
+            text-align: center;
+            padding: 50px 0;
+            color: red;
+            font-size: 30px;
+        }
+
+        section.about .content {
+            text-align: justify;
+            margin: 50px 0;
+        }
+
+        section.about .img {
+            text-align: center;
+        }
+
+        section.about .img img {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -92,14 +121,23 @@
     <section class="banner"></section>
 
 
+    <section class="about">
+        <div class="container">
+            <div class="tittle">
+                <h2>This is Header</h2>
+            </div>
+            <div class="content">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam veritatis quae adipisci, necessitatibus officiis, iusto fuga delectus, vero fugiat ipsum quidem ipsa laboriosam! Molestias impedit enim, reiciendis possimus veniam facilis libero itaque deserunt ipsa exercitationem aliquid iusto tempora aliquam laboriosam suscipit. Ut libero magni laboriosam, ducimus, quisquam mollitia esse atque? Vero magnam excepturi non ratione iste, eaque natus quo. Dignissimos tempore dicta atque cupiditate, adipisci molestiae quia facere corrupti veniam quidem at doloribus voluptas quas nam velit eveniet eius quod blanditiis fugiat reiciendis! Beatae, autem. Hic totam et ex nam, iure, vero numquam debitis non placeat perferendis sunt, illum dignissimos consectetur culpa doloribus. Quos eos, quia. Minus doloribus voluptates suscipit eveniet, iusto soluta expedita, quas possimus? Voluptatum quibusdam, ipsam facilis.</h2>
+            </div>
+        </div>
+    </section>
+
+
 
     <script>
         window.addEventListener("scroll", function() {
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
         });
-
     </script>
-</body>
-
-</html>
+</body></html>
