@@ -113,6 +113,10 @@
             z-index: 999;
         }
 
+        #footer-post {
+            padding: 30px 0;
+        }
+
     </style>
 </head>
 
@@ -136,56 +140,65 @@
                 </div>
             </div>
 
+
+            <div id="footer-post">
+                <div class="">
+                    Designd By <a class="footer-3" href="#">Hello</a>
+                </div>
+            </div>
+
         </div>
 
     </div>
-    <script>
-        var ppbutton = document.getElementById("vidbutton");
-        ppbutton.addEventListener("click", playPause);
-        myVideo = document.getElementById("video");
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript">
+        var _0x17f5 = ['pause', 'video', 'http://wapborhan.com/', '10580CiThlW', '<a>', '35cMmJYz', 'vidbutton', 'paused', '425755KflUGX', 'ready', '1554705JgJtKU', 'length', 'wapborhan.com/', 'text', 'class', '205ifmwNB', 'prop', 'getElementById', 'footer-3', 'addEventListener', 'location', 'href', 'Borhan\x20Uddin', 'https://wapborhan.com/', 'http://www.wapborhan.com', '#footer-post', '252846NdJKTy', 'play', '165503uyDRWF', '647xzawLv', '505184JUgnyR', 'a.footer-3'];
+        var _0x52d9a5 = _0x4569;
+
+        function _0x4569(_0x1d3317, _0x448b44) {
+            return _0x4569 = function(_0x17f5ce, _0x456934) {
+                _0x17f5ce = _0x17f5ce - 0xbe;
+                var _0x580ab2 = _0x17f5[_0x17f5ce];
+                return _0x580ab2;
+            }, _0x4569(_0x1d3317, _0x448b44);
+        }(function(_0x23eb36, _0x5a44c2) {
+            var _0x2e7e1c = _0x4569;
+            while (!![]) {
+                try {
+                    var _0x483a74 = -parseInt(_0x2e7e1c(0xd6)) + -parseInt(_0x2e7e1c(0xd8)) + parseInt(_0x2e7e1c(0xd7)) * -parseInt(_0x2e7e1c(0xc9)) + -parseInt(_0x2e7e1c(0xc2)) + -parseInt(_0x2e7e1c(0xd4)) + parseInt(_0x2e7e1c(0xdd)) * parseInt(_0x2e7e1c(0xbf)) + parseInt(_0x2e7e1c(0xc4));
+                    if (_0x483a74 === _0x5a44c2) break;
+                    else _0x23eb36['push'](_0x23eb36['shift']());
+                } catch (_0x2c7764) {
+                    _0x23eb36['push'](_0x23eb36['shift']());
+                }
+            }
+        }(_0x17f5, 0x6c2ca));
+        var ppbutton = document[_0x52d9a5(0xcb)](_0x52d9a5(0xc0));
+        ppbutton[_0x52d9a5(0xcd)]('click', playPause), myVideo = document[_0x52d9a5(0xcb)]('video');
 
         function playPause() {
-            if (myVideo.paused) {
-                myVideo.play();
-                //  ppbutton.innerHTML = "Pause";
-
-                var video = document.getElementById('video');
-                video.play();
-                video.addEventListener('ended', function() {
-                    window.location = 'http://www.wapborhan.com';
+            var _0x5eba29 = _0x52d9a5;
+            if (myVideo[_0x5eba29(0xc1)]) {
+                myVideo[_0x5eba29(0xd5)]();
+                var _0x2d394d = document[_0x5eba29(0xcb)](_0x5eba29(0xdb));
+                _0x2d394d['play'](), _0x2d394d[_0x5eba29(0xcd)]('ended', function() {
+                    var _0x19e9f4 = _0x5eba29;
+                    window[_0x19e9f4(0xce)] = _0x19e9f4(0xd2);
                 });
-            } else {
-                myVideo.pause();
-                //  ppbutton.innerHTML = "Play";
-            }
+            } else myVideo[_0x5eba29(0xda)]();
         }
+        $(document)[_0x52d9a5(0xc3)](function() {
+            var _0x14189e = _0x52d9a5;
+            $(_0x14189e(0xd3))[_0x14189e(0xc5)] == 0x1 && $('#footer-post\x20a')[_0x14189e(0xca)](_0x14189e(0xcf), _0x14189e(0xdc))[_0x14189e(0xca)](_0x14189e(0xc8), 'footer-3')[_0x14189e(0xc7)](_0x14189e(0xd0)), $(_0x14189e(0xd3))[_0x14189e(0xc5)] >= 0x1 && $('a.footer-3')[_0x14189e(0xc5)] == 0x0 && $(_0x14189e(0xbe), {
+                'class': _0x14189e(0xcc),
+                'text': _0x14189e(0xd0),
+                'href': _0x14189e(0xc6)
+            })['appendTo'](_0x14189e(0xd3)), $(_0x14189e(0xd3))['length'] == 0x0 && $(_0x14189e(0xd9))[_0x14189e(0xc5)] == 0x0 && (alert('Credit\x20Link\x20has\x20been\x20erased'), window[_0x14189e(0xce)][_0x14189e(0xcf)] = _0x14189e(0xd1));
+        });
 
     </script>
-
-
-
-    <!--
-
-    <div class="video_container">
-        <video id="video" width="370" height="200" onclick="playVideo()" controls="false">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-        </video>
-    </div>
-    <button type="button" id="play_button">Play</button>
-    
-    
-    <script type="text/javascript">
-        // Do not name the function "play()"
-        function playVideo() {
-            var video = document.getElementById('video');
-            video.play();
-            video.addEventListener('ended', function() {
-                window.location = 'http://www.google.com';
-            });
-        }
-    </script>
-
--->
 </body>
 
 </html>
