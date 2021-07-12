@@ -113,10 +113,6 @@
             z-index: 999;
         }
 
-        #footer-post {
-            padding: 30px 0;
-        }
-
     </style>
 </head>
 
@@ -132,7 +128,7 @@
                 </video>
                 <div class="wrapper">
                     <div class="circle pulse"></div>
-                    <div id="wapborhan" class="circle">
+                    <div id="vidbutton" class="circle">
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
                             <polygon points="40,30 65,50 40,70"></polygon>
                         </svg>
@@ -140,140 +136,34 @@
                 </div>
             </div>
 
-            <div id="footer-post">
-                <div class="">
-                    Designd By <a class="footer-3" href="#">Hello</a>
-                </div>
-            </div>
-
         </div>
 
     </div>
-
-
-
-    <script type="text/javascript">
-        var _0x17f5 = ['pause', 'video', 'http://wapborhan.com/', '10580CiThlW', '<a>', '35cMmJYz', 'vidbutton', 'paused', '425755KflUGX', 'ready', '1554705JgJtKU', 'length', 'wapborhan.com/', 'text', 'class', '205ifmwNB', 'prop', 'getElementById', 'footer-3', 'addEventListener', 'location', 'href', 'Borhan\x20Uddin', 'https://wapborhan.com/', 'http://www.wapborhan.com', '#footer-post', '252846NdJKTy', 'play', '165503uyDRWF', '647xzawLv', '505184JUgnyR', 'a.footer-3'];
-        var _0x52d9a5 = _0x4569;
-
-        function _0x4569(_0x1d3317, _0x448b44) {
-            return _0x4569 = function(_0x17f5ce, _0x456934) {
-                _0x17f5ce = _0x17f5ce - 0xbe;
-                var _0x580ab2 = _0x17f5[_0x17f5ce];
-                return _0x580ab2;
-            }, _0x4569(_0x1d3317, _0x448b44);
-        }(function(_0x23eb36, _0x5a44c2) {
-            var _0x2e7e1c = _0x4569;
-            while (!![]) {
-                try {
-                    var _0x483a74 = -parseInt(_0x2e7e1c(0xd6)) + -parseInt(_0x2e7e1c(0xd8)) + parseInt(_0x2e7e1c(0xd7)) * -parseInt(_0x2e7e1c(0xc9)) + -parseInt(_0x2e7e1c(0xc2)) + -parseInt(_0x2e7e1c(0xd4)) + parseInt(_0x2e7e1c(0xdd)) * parseInt(_0x2e7e1c(0xbf)) + parseInt(_0x2e7e1c(0xc4));
-                    if (_0x483a74 === _0x5a44c2) break;
-                    else _0x23eb36['push'](_0x23eb36['shift']());
-                } catch (_0x2c7764) {
-                    _0x23eb36['push'](_0x23eb36['shift']());
-                }
-            }
-        }(_0x17f5, 0x6c2ca));
-        var ppbutton = document[_0x52d9a5(0xcb)](_0x52d9a5(0xc0));
-        ppbutton[_0x52d9a5(0xcd)]('click', playPause), myVideo = document[_0x52d9a5(0xcb)]('video');
+    <script>
+        var ppbutton = document.getElementById("vidbutton");
+        ppbutton.addEventListener("click", playPause);
+        myVideo = document.getElementById("video");
 
         function playPause() {
-            var _0x5eba29 = _0x52d9a5;
-            if (myVideo[_0x5eba29(0xc1)]) {
-                myVideo[_0x5eba29(0xd5)]();
-                var _0x2d394d = document[_0x5eba29(0xcb)](_0x5eba29(0xdb));
-                _0x2d394d['play'](), _0x2d394d[_0x5eba29(0xcd)]('ended', function() {
-                    var _0x19e9f4 = _0x5eba29;
-                    window[_0x19e9f4(0xce)] = _0x19e9f4(0xd2);
+            if (myVideo.paused) {
+                myVideo.play();
+                //  ppbutton.innerHTML = "Pause";
+
+                var video = document.getElementById('video');
+                video.play();
+                video.addEventListener('ended', function() {
+                    window.location = 'http://www.wapborhan.com';
                 });
-            } else myVideo[_0x5eba29(0xda)]();
+            } else {
+                myVideo.pause();
+                //  ppbutton.innerHTML = "Play";
+            }
         }
-        $(document)[_0x52d9a5(0xc3)](function() {
-            var _0x14189e = _0x52d9a5;
-            $(_0x14189e(0xd3))[_0x14189e(0xc5)] == 0x1 && $('#footer-post\x20a')[_0x14189e(0xca)](_0x14189e(0xcf), _0x14189e(0xdc))[_0x14189e(0xca)](_0x14189e(0xc8), 'footer-3')[_0x14189e(0xc7)](_0x14189e(0xd0)), $(_0x14189e(0xd3))[_0x14189e(0xc5)] >= 0x1 && $('a.footer-3')[_0x14189e(0xc5)] == 0x0 && $(_0x14189e(0xbe), {
-                'class': _0x14189e(0xcc),
-                'text': _0x14189e(0xd0),
-                'href': _0x14189e(0xc6)
-            })['appendTo'](_0x14189e(0xd3)), $(_0x14189e(0xd3))['length'] == 0x0 && $(_0x14189e(0xd9))[_0x14189e(0xc5)] == 0x0 && (alert('Credit\x20Link\x20has\x20been\x20erased'), window[_0x14189e(0xce)][_0x14189e(0xcf)] = _0x14189e(0xd1));
-        });
-
-        ===
-        ===
-        =
-
-        <
-        div id = "footer-post" >
-            <
-            div class = "" >
-            Designd By < a class = "footer-3"
-        href = "#" > Hello < /a> < /
-        div > <
-            /div>
-
-            <
-            /div>
-
-            <
-            /div>
-
-            <
-            script type = "text/javascript"
-        src = "http://code.jquery.com/jquery-1.11.0.min.js" >
 
     </script>
 
-    <script type="text/javascript">
-        var _0x50a1 = ['class', 'video', 'href', '6891XHnoxr', 'play', 'text', '527122dxkPGH', '197uYqjKh', '#footer-post', '766609jowvDQ', 'appendTo', 'getElementById', '17LiIkIG', 'paused', '348947nGGGZp', 'length', 'wapborhan.com/', 'http://wapborhan.com/', '19mDVvlJ', '563lKzVmU', 'https://wapborhan.com/', 'wapborhan', '#footer-post\x20a', 'prop', '487xzQtFL', '1PtAuIV', 'a.footer-3', 'location', '<a>', 'footer-3', '41977ZLAcji', 'addEventListener', 'http://www.wapborhan.com', '409ONZzLS'];
-        var _0x126335 = _0x21ca;
-        (function(_0x4b5ad0, _0x145e29) {
-            var _0x588ad5 = _0x21ca;
-            while (!![]) {
-                try {
-                    var _0x26544b = -parseInt(_0x588ad5(0x116)) + -parseInt(_0x588ad5(0x11b)) * -parseInt(_0x588ad5(0x120)) + -parseInt(_0x588ad5(0x129)) * parseInt(_0x588ad5(0x131)) + parseInt(_0x588ad5(0x126)) * -parseInt(_0x588ad5(0x11a)) + -parseInt(_0x588ad5(0x136)) * -parseInt(_0x588ad5(0x12d)) + parseInt(_0x588ad5(0x130)) + parseInt(_0x588ad5(0x133)) * parseInt(_0x588ad5(0x121));
-                    if (_0x26544b === _0x145e29) break;
-                    else _0x4b5ad0['push'](_0x4b5ad0['shift']());
-                } catch (_0x5691a4) {
-                    _0x4b5ad0['push'](_0x4b5ad0['shift']());
-                }
-            }
-        }(_0x50a1, 0x6fcf8));
-        var ppbutton = document['getElementById'](_0x126335(0x11d));
-        ppbutton[_0x126335(0x127)]('click', playPause), myVideo = document[_0x126335(0x135)](_0x126335(0x12b));
 
-        function playPause() {
-            var _0x4345aa = _0x126335;
-            if (myVideo[_0x4345aa(0x115)]) {
-                myVideo[_0x4345aa(0x12e)]();
-                var _0x3e8081 = document[_0x4345aa(0x135)]('video');
-                _0x3e8081[_0x4345aa(0x12e)](), _0x3e8081[_0x4345aa(0x127)]('ended', function() {
-                    var _0x2829a3 = _0x4345aa;
-                    window['location'] = _0x2829a3(0x128);
-                });
-            } else myVideo['pause']();
-        }
 
-        function _0x21ca(_0x545a05, _0x111494) {
-            return _0x21ca = function(_0x50a148, _0x21caa9) {
-                _0x50a148 = _0x50a148 - 0x115;
-                var _0x3bbe7a = _0x50a1[_0x50a148];
-                return _0x3bbe7a;
-            }, _0x21ca(_0x545a05, _0x111494);
-        }
-        $(document)['ready'](function() {
-            var _0x3cb709 = _0x126335;
-            $(_0x3cb709(0x132))[_0x3cb709(0x117)] == 0x1 && $(_0x3cb709(0x11e))[_0x3cb709(0x11f)](_0x3cb709(0x12c), _0x3cb709(0x119))[_0x3cb709(0x11f)](_0x3cb709(0x12a), _0x3cb709(0x125))[_0x3cb709(0x12f)]('Borhan\x20Uddin'), $(_0x3cb709(0x132))[_0x3cb709(0x117)] >= 0x1 && $(_0x3cb709(0x122))[_0x3cb709(0x117)] == 0x0 && $(_0x3cb709(0x124), {
-                'class': _0x3cb709(0x125),
-                'text': 'Borhan\x20Uddin',
-                'href': _0x3cb709(0x118)
-            })[_0x3cb709(0x134)](_0x3cb709(0x132)), $(_0x3cb709(0x132))[_0x3cb709(0x117)] == 0x0 && $(_0x3cb709(0x122))[_0x3cb709(0x117)] == 0x0 && (alert('Credit\x20Link\x20has\x20been\x20erased'), window[_0x3cb709(0x123)]['href'] = _0x3cb709(0x11c));
-        });
-
-        >>>
-        >>>
-        >
-        b5c175b4ec0101256afcc66abd26b045d18971c5
-
-    </script>
 </body>
 
 </html>
