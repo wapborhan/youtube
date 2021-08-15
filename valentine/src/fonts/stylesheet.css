@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'SolaimanLipi';
+    src: url('SolaimanLipi.eot');
+    src: url('SolaimanLipi.eot?#iefix') format('embedded-opentype'),
+        url('SolaimanLipi.woff2') format('woff2'),
+        url('SolaimanLipi.woff') format('woff'),
+        url('SolaimanLipi.svg#SolaimanLipi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Li Shohid Barkat Unicode';
+    src: url('LiShohidBarkatUnicode.eot');
+    src: url('LiShohidBarkatUnicode.eot?#iefix') format('embedded-opentype'),
+        url('LiShohidBarkatUnicode.woff2') format('woff2'),
+        url('LiShohidBarkatUnicode.woff') format('woff'),
+        url('LiShohidBarkatUnicode.svg#LiShohidBarkatUnicode') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Li Sirajee Sheikh Unicode';
+    src: url('LiSirajeeSheikhUnicode.eot');
+    src: url('LiSirajeeSheikhUnicode.eot?#iefix') format('embedded-opentype'),
+        url('LiSirajeeSheikhUnicode.woff2') format('woff2'),
+        url('LiSirajeeSheikhUnicode.woff') format('woff'),
+        url('LiSirajeeSheikhUnicode.svg#LiSirajeeSheikhUnicode') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
