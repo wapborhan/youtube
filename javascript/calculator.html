@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculetor</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    }
+
+    body{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .sec{
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .sec .bod{
+        
+        background: #888;
+        color: #ffffff;
+        font-size: 20px;
+        padding: 10px 0 10px 100px;
+    }
+
+    .sec h2{
+        background: rgb(255, 157, 0);
+        padding: 10px 0 10px 50px;
+        color: red;
+    }
+    .sec h2::after{
+        content: ">>";
+        position: absolute;
+        top: 10px;
+        left: 17px;
+        color: lime;
+        font-weight: 900;
+    }
+    .indent-20 h3{
+        color: red;
+        text-transform: uppercase;
+    }
+    input#dob {
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    }
+    span.success {
+    background: green;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    }
+    span.wrong {
+    background: red;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="sec">
+        <h2>Age Calculetor</h2>
+        <div class="bod">
+            <div class='indent-20'>
+                <h3>Using Javascript to calculate age</h3>
+              
+                <p>
+                  Your date of birth:  
+                  <input id="dob" type="text" placeholder="DD/MM/YYYY">
+                </p> 
+              
+                <p>
+                  Your age: <span id="age"></span>
+                </p> 
+                
+            </div>  
+
+        </div>
+    </div>
+          
+<script>
+    (function(){
+
+        // Declare global variable
+        var elem = document.getElementById('dob'),
+        age  = document.getElementById('age');
+
+        // Step to step
+        // Step 01: declare input events (change)
+        elem.addEventListener("change", function(){
+        if (checkInput(elem.value)){
+            var ageCount = calculateAge(parseDate(elem.value), new Date());
+            age.innerHTML = ageCount[0] + ' years old and ' + ageCount[1] + ' days';
+            age.classList.remove('wrong');
+            age.classList.add('success');
+        } else {
+        age.innerHTML = 'Please enter the correct syntax "DD/MM/YYYY"';
+        age.classList.remove('success');
+        age.classList.add('wrong');
+        } 
+        }, false);
+
+        // Step 02: Check input is not undifined & correct syntax
+        function checkInput(textDate){
+        var getTextDate = textDate;
+        if(getTextDate == '') {
+        // If input when change is empty => result return true (NaN)
+        return true;
+        } else {
+
+        // Declare regular expression 
+        var regularDate = /^(\d{1,2})(\/|-)(\d{1,2})(\/|-)(\d{4})$/;
+        // Search regular expression and return Array
+        // it's return every elem ( ex: 27/12/1992 => array [27/12/1992,27,/,12,/,1992] )
+        var matchArray = getTextDate.match(regularDate); // is format OK?
+        if (matchArray == null) {
+        // When input center is Alpha return false -Please enter the correct syntax-
+        return false;
+        } else {
+
+        // Checks for dd/mm/yyyy format.
+        var matchDay = matchArray[1];
+        var matchMonth = matchArray[3];
+        var matchYear = matchArray[5];
+
+        // Check input year large year now3
+        if(new Date(matchYear).getFullYear() >= new Date().getFullYear()) {
+        return false;
+        }
+
+        if (matchDay > 31 || matchDay < 1) {
+        return false;
+        } else if (matchMonth > 12 || matchMonth < 1) {
+        return false;
+        } else if ((matchMonth == 2 || matchMonth == 4 || matchMonth == 6 || matchMonth == 9 || matchMonth == 11) && matchDay == 31) {
+        return false;
+        } else if (matchMonth == 2) {
+        var isleap = (matchYear % 4 == 0 && (matchYear % 100 != 0 || matchYear % 400 == 0));
+        if (matchDay > 29 || (matchDay == 29 && !isleap)) {
+        return false; 
+        } else {}
+        }
+
+        }
+
+        }
+
+        return true;
+
+        }
+
+        // Step 03: convert value from input(string) to format date dd/mm/yyyy
+        function parseDate(stringText){
+        var formatText = stringText.split('/');
+        return new Date(formatText[2], (formatText[1] - 1), formatText[0]);
+        }
+
+        // Step 04: call function calculate (result how old years & date)
+        function calculateAge(DateFromInput, DateNow){
+        var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+        var age = Math.round(Math.abs((DateFromInput.getTime() - DateNow.getTime())/(oneDay)));
+        var resultYear = Math.ceil(age / 365) - 1;
+        var resultDay = age - (resultYear*365);
+        var resultage = [];
+        resultage.push(resultYear, resultDay);
+        return resultage;
+
+        }
+
+    })
+
+();
+</script>
+</body>
+</html>
