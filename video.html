@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WapBorhan - Video</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0 auto;
+            padding: 100px 0;
+        }
+
+        .mainvid {
+            position: relative;
+        }
+
+        .video:hover .wrapper {
+            opacity: 1;
+            transition: all linear 0.3s;
+        }
+
+        .video {
+            width: 100%;
+        }
+
+        .wrapper {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all linear 0.3s;
+        }
+
+        .wrapper .circle {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            background-color: #ff0a0a;
+            margin: auto;
+            transform: scale(1, 1);
+        }
+
+        .wrapper .circle.pulse {
+            -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+            -webkit-animation: pulse 2s infinite;
+            animation: pulse 2s infinite;
+            background-color: #99e699;
+        }
+
+        .wrapper svg {
+            fill: #279b27;
+            stroke: #279b27;
+            stroke-linejoin: round;
+            stroke-width: 5;
+            transition: all 0.3s;
+        }
+
+        .wrapper svg:hover {
+            cursor: pointer;
+            fill: #228722;
+            stroke: #228722;
+            transform: scale(1.2, 1.2);
+        }
+
+        @-webkit-keyframes pulse {
+            0% {
+                transform: scale(1, 1);
+            }
+
+            25% {
+                transform: scale(1, 1);
+            }
+
+            50% {
+                transform: scale(1.2, 1.2);
+            }
+
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1, 1);
+            }
+
+            25% {
+                transform: scale(1, 1);
+            }
+
+            50% {
+                transform: scale(1.2, 1.2);
+            }
+
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+
+        button#vidbutton {
+            z-index: 999;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div style="text-align:center">
+        <div class="mainvid">
+            <div class="video">
+                <video id="video" width="820">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+
+                </video>
+                <div class="wrapper">
+                    <div class="circle pulse"></div>
+                    <div id="vidbutton" class="circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                            <polygon points="40,30 65,50 40,70"></polygon>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        var ppbutton = document.getElementById("vidbutton");
+        ppbutton.addEventListener("click", playPause);
+        myVideo = document.getElementById("video");
+
+        function playPause() {
+            if (myVideo.paused) {
+                myVideo.play();
+                //  ppbutton.innerHTML = "Pause";
+
+                var video = document.getElementById('video');
+                video.play();
+                video.addEventListener('ended', function() {
+                    window.location = 'http://www.wapborhan.com';
+                });
+            } else {
+                myVideo.pause();
+                //  ppbutton.innerHTML = "Play";
+            }
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

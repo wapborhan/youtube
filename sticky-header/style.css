@@ -1,0 +1,110 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        outline: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #eee;
+        width: 100%;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.6s;
+        padding: 20px 200px;
+        z-index: 1000;
+    }
+
+    header .logo {
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    header .logo a:hover {
+        color: #ff0000;
+        transition: all linear 0.3s;
+    }
+
+    header .logo a {
+        text-decoration: none;
+        transition: all linear 0.3s;
+        color: #fff;
+    }
+
+    header ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header ul li {
+        position: relative;
+        list-style: none;
+    }
+
+    header ul li a {
+        position: relative;
+        margin: 0 15px;
+        text-decoration: none;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        transection: 0.3s;
+    }
+
+    header ul li a:hover {
+        color: red;
+        transection: 0.3s;
+    }
+
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: url(https://media.istockphoto.com/photos/abstract-technology-blue-spotlight-backgrounds-loopable-elements-4k-picture-id1174989484?b=1&k=6&m=1174989484&s=170667a&w=0&h=wpPp72Blf2WwsOYN80wWapAnXz2U_gviSPUr8S-_k6E=);
+        background-color: #000;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    header.sticky {
+        background: #000000ed;
+        padding: 5px 160px;
+    }
+
+    section.about {
+        padding: 100px 0px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 100px;
+        margin: 0 auto;
+    }
+
+    section.about .tittle {
+        text-align: center;
+        padding: 50px 0;
+        color: red;
+        font-size: 30px;
+    }
+
+    section.about .content {
+        text-align: justify;
+        margin: 50px 0;
+    }
